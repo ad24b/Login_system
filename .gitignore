@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Environment
+.env
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Django
+staticfiles/
+media/
+db.sqlite3
+
+# Node
+node_modules/
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Videos or large media
+*.mp4
+*.mov
+
+
