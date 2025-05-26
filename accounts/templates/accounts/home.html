@@ -1,0 +1,14 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}الرئيسية{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="text-center">
+    <div class="alert alert-success" role="alert">
+      ✅ تم تسجيل الدخول بنجاح، مرحباً بك يا <strong>{{ request.user.username }}</strong>!
+    </div>
+    <a href="{% url 'logout' %}" class="btn btn-danger">تسجيل الخروج</a>
+  </div>
+</div>
+{% endblock %}

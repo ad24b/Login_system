@@ -1,0 +1,12 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+<div class="login-container">
+  <div class="login-title">تأكيد رقم الجوال</div>
+  <div class="login-subtitle">الرجاء إدخال رمز التحقق</div>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="otp" class="form-control text-center" placeholder="رمز التحقق المرسل على واتساب" required>
+    <button type="submit" class="btn-next">تأكيد رقم الجوال</button>
+  </form>
+</div>
+{% endblock %}
