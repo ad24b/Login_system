@@ -1,12 +1,29 @@
 {% extends 'accounts/base.html' %}
+{% load static %}
+
 {% block content %}
 <div class="login-container">
-  <div class="login-title">تسجيل الدخول أو إنشاء حساب</div>
-  <div class="login-subtitle">أدخل اسم المستخدم أو رقم الجوال</div>
-  <form method="post">
-    {% csrf_token %}
-    <input type="text" name="phone" class="form-control" placeholder="ادخل رقم الجوال هنا" required>
-    <button type="submit" class="btn-next">التالي</button>
-  </form>
+    <div class="login-title">تسجيل الدخول</div>
+    <div class="login-subtitle">أدخل رقم الجوال أو اسم المستخدم وكلمة المرور</div>
+
+    <!-- رسائل الخطأ باللون الأحمر -->
+    <div id="error-message" style="color: red; text-align: center; display: none;" class="mb-2"></div>
+
+    <form id="login-form" autocomplete="off">
+        {% csrf_token %}
+        <input id="identifier" name="identifier" type="text" placeholder="رقم الجوال أو اسم المستخدم" class="form-control text-center mb-3" required>
+        <input id="password" name="password" type="password" placeholder="كلمة المرور" class="form-control text-center mb-3" required>
+        <button type="submit" class="btn-next w-100">التالي</button>
+    </form>
+
+    <div class="text-center mt-3">
+        <span>ليس لديك حساب؟</span>
+        <a href="{% url 'start_registration' %}" class="text-decoration-underline text-primary">اضغط هنا لإنشاء حساب</a>
+
+    </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'accounts/login.js' %}"></script>
 {% endblock %}

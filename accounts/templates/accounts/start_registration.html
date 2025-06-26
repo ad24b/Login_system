@@ -1,0 +1,19 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+<div class="login-container">
+  <div class="login-title">إنشاء حساب جديد</div>
+  <div class="login-subtitle">أدخل رقم الجوال الخاص بك</div>
+
+  {% if messages %}
+      {% for message in messages %}
+          <div style="color: red; text-align: center;">{{ message }}</div>
+      {% endfor %}
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="phone" placeholder="رقم الجوال" class="form-control text-center mb-3" required>
+    <button type="submit" class="btn-next w-100">إرسال رمز التحقق</button>
+  </form>
+</div>
+{% endblock %}

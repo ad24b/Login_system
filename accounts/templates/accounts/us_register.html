@@ -1,0 +1,29 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<div class="register-container">
+  <div class="register-title">إنشاء اسم المستخدم الخاص بك</div>
+  <div class="register-subtitle">ادخل اسم المستخدم وكلمة المرور</div>
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <div class="input-group">
+      <input type="text" name="username" placeholder="اسم المستخدم" required>
+      <i class="fas fa-user"></i>
+    </div>
+
+    <div class="input-group">
+      <input type="password" name="password" placeholder="كلمة المرور" required>
+      <i class="fas fa-lock"></i>
+    </div>
+
+    <div class="input-group">
+      <input type="password" name="confirm_password" placeholder="تأكيد كلمة المرور" required>
+      <i class="fas fa-lock"></i>
+    </div>
+
+    <button type="submit" class="btn-next">التالي</button>
+  </form>
+</div>
+{% endblock %}

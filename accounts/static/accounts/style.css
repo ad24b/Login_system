@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* مظهر صفحة تسجيل الدخول */
 .login-container {
     max-width: 400px;
     margin: 100px auto;
@@ -24,4 +25,66 @@ body {
     font-size: 14px;
     color: #555;
     margin-bottom: 20px;
+}
+
+/* مظهر صفحة إنشاء المستخدم */
+.register-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.register-subtitle {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    direction: rtl;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.btn-next {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-next:hover {
+    background-color: #0056b3;
 }
